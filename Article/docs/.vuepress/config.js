@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/vuepress-notes/',
   title: 'Yu jax',
   description: 'test',
   themeConfig: {
