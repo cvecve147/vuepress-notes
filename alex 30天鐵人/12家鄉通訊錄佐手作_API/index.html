@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>家鄉通訊錄佐手作 API #1</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous"
+  />
+  <style>
+    * {
+      margin: 0 0;
+      padding: 0%;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    body {
+      background-color: mediumseagreen;
+    }
+    .align-items-center {
+      height: 100vh;
+    }
+    .col-md-auto {
+      padding: 0 0;
+    }
+    .justify-content-center {
+      top: -200px;
+      width: 900px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div id="app">
+      <section v-if="loading">
+        Loading....
+      </section>
+      <section v-else>
+        <div class="container  ">
+          <div class="row align-items-center">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="name"
+                v-model.trim="input.name"
+              />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="email"
+                v-model.trim="input.email"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-warning"
+                  type="button"
+                  @click="submitHandler"
+                >
+                  送出
+                </button>
+                <button
+                  class="btn btn-warning"
+                  type="button"
+                  @click="cancelHandler"
+                >
+                  取消
+                </button>
+              </div>
+            </div>
+            <div class="justify-content-center">
+              <li class="list-group-item" v-for="(item,index) in contacts">
+                <span class="badge badge-pill badge-primary number col-sm-1"
+                  >{{ item.id }}
+                </span>
+                <span class="badge badge-warning name col-sm-2"
+                  >{{ item.name }}
+                </span>
+                <a href="'mailto:'+item.email" class="col-sm-4"
+                  >{{ item.email }}
+                </a>
+                <span
+                  class="badge badge-danger"
+                  class="col-sm-1"
+                  @click="editHandler(index)"
+                  >修改</span
+                >
+                <span
+                  class="badge badge-dark"
+                  class="col-sm-1"
+                  @click="deleteHandler(index)"
+                  >刪除</span
+                >
+              </li>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+
+    <script>
+      ;(function(Vue) {
+        new Vue({
+          el: '#app',
+          data: {
+            loading: false,
+            contacts: [],
+            editIndex: null,
+            input: {
+              name: '',
+              email: ''
+            }
+          },
+          methods: {
+            submitHandler() {
+              let { name, email } = this.input
+              if (!name || !email) return
+              this.loading = true
+              if (this.editIndex == null) {
+                axios
+                  .post('http://localhost:8886/contact', this.input)
+                  .then(res => {
+                    this.contacts.push(res.data)
+                    this.loading = false
+                    this.cancelHandler()
+                  })
+                  .catch(err => {
+                    console.log(err)
+                  })
+              } else {
+                let id = this.contacts[this.editIndex].id
+                axios
+                  .put('http://localhost:8886/contact/' + id, this.input)
+                  .then(res => {
+                    this.contacts[this.editIndex] = res.data
+                    this.loading = false
+                    this.cancelHandler()
+                  })
+                  .catch(err => {
+                    console.log(err)
+                  })
+              }
+            },
+            cancelHandler() {
+              this.input.name = ''
+              this.input.email = ''
+              this.editIndex = null
+            },
+            deleteHandler(index) {
+              let target = this.contacts[index]
+              if (confirm(`是否刪除 ${target.name}?`)) {
+                this.loading = true
+                axios
+                  .delete('http://localhost:8886/contact/' + target.id)
+                  .then(res => {
+                    this.contacts.splice(index, 1)
+                    this.cancelHandler()
+                    this.loading = false
+                  })
+                  .catch(err => {
+                    console.log(err)
+                  })
+              }
+            },
+            editHandler(index) {
+              let { name, email } = this.contacts[index]
+              // this.input.name = name
+              // this.input.email = email
+              this.editIndex = index
+              this.input = {
+                name,
+                email
+              }
+            }
+          },
+          mounted() {
+            this.loading = true
+            axios
+              .get('http://localhost:8886/contact')
+              .then(res => {
+                this.contacts = res.data
+                this.loading = false
+              })
+              .catch(err => {
+                console.log(err)
+              })
+          }
+        })
+      })(Vue)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "html.format.wrapLineLength": 120,
+  "vetur.format.styleInitialIndent": true,
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "vetur.validation.template": false,
+  "git.ignoreLimitWarning": true
+}

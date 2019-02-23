@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <section>
+        <div class="container">
+          <div class="title">
+            <!-- <img v-bind:src="src" alt="" class="logo" /> -->
+            <img :src="src" alt="" class="logo">
+            <h1>{{title}}</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+    <script>
+      let data = {
+        src: "./img/14393247_120300000192992615_994382660_o.png.jpg",
+        title: "Test"
+      };
+      let vm = new Vue({
+        el: "#app",
+        data: data
+      });
+    </script>
+  </body>
+</html>

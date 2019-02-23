@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>使用者輸入焗列表呈現</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0 0;
+      padding: 0%;
+      text-align: center;
+    }
+    body {
+      background-color: mediumseagreen;
+    }
+    .align-items-center {
+      height: 100vh;
+    }
+    .container {
+      margin: auto;
+    }
+    .text {
+      display: inline;
+    }
+  </style>
+  <body>
+    <div id="app">
+      <section class="row align-items-center">
+        <div class="container">
+          <select v-model="input.type">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <input
+            type="text"
+            v-model.trim="input.title"
+            @keyup.enter="inputHandler"
+          />
+
+          <div class="menu alert alert-success row">
+            <div class="menuItem col-6" v-for="(item,index) in menu">
+              <span class="number btn btn-secondary">{{ index + 1 }}</span>
+              <span class="type btn btn-warning">{{ item.type }}</span>
+              <a href="javascript:;" class="title" target="vue-iron">{{
+                item.title
+              }}</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+    <script src="day6.js"></script>
+  </body>
+</html>
