@@ -22,7 +22,9 @@ module.exports = {
       ['/day5', 'Day5 天然 CSS 過場佐 jQuery 動畫'],
       ['/day6', 'Day6 異國風情資料觀測與設定'],
       ['/day7', 'Day7 有機發酵生命週期'],
-      ['/day8', 'Day8 家鄉通訊錄佐手作']
+      ['/day8', 'Day8 家鄉通訊錄佐手作'],
+      ['/day9', 'Day9 特製雕花 Vue-cli 3.0 與 Node.js 開發環境'],
+      ['/day10', 'Day10 科學單檔模組化料理']
     ]
   }
 }
