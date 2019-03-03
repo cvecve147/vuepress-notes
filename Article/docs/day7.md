@@ -18,7 +18,7 @@
 <a href="https://floraya.gitbooks.io/vue-2-0/content/vuejs-chang-shi-yong-shu-xing.html">https://floraya.gitbooks.io/vue-2-0/content/vuejs-chang-shi-yong-shu-xing.html</a>
 :::
 
-<img src="https://i.imgur.com/mDfRIt6.png">
+
 <hr>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/_Mx_YW8Nd3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 ```

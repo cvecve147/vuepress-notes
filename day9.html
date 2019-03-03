@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day9 特製雕花 Vue-cli 3.0 與 Node.js 開發環境 | Yu jax</title>
+    <meta name="description" content="test">
+    
+    
+    <link rel="preload" href="/vuepress-notes/assets/css/0.styles.1e2ea9a1.css" as="style"><link rel="preload" href="/vuepress-notes/assets/js/app.05aa0dac.js" as="script"><link rel="preload" href="/vuepress-notes/assets/js/14.aad26f71.js" as="script"><link rel="prefetch" href="/vuepress-notes/assets/js/10.3b217be3.js"><link rel="prefetch" href="/vuepress-notes/assets/js/11.abba6873.js"><link rel="prefetch" href="/vuepress-notes/assets/js/12.49d1580c.js"><link rel="prefetch" href="/vuepress-notes/assets/js/13.8ff8da65.js"><link rel="prefetch" href="/vuepress-notes/assets/js/15.e678933f.js"><link rel="prefetch" href="/vuepress-notes/assets/js/16.f3998b3e.js"><link rel="prefetch" href="/vuepress-notes/assets/js/2.7c6bb5e9.js"><link rel="prefetch" href="/vuepress-notes/assets/js/3.b6261e45.js"><link rel="prefetch" href="/vuepress-notes/assets/js/4.6829dea6.js"><link rel="prefetch" href="/vuepress-notes/assets/js/5.66d9f6a6.js"><link rel="prefetch" href="/vuepress-notes/assets/js/6.1af243c3.js"><link rel="prefetch" href="/vuepress-notes/assets/js/7.e948a6a0.js"><link rel="prefetch" href="/vuepress-notes/assets/js/8.e96a7232.js"><link rel="prefetch" href="/vuepress-notes/assets/js/9.271093ff.js">
+    <link rel="stylesheet" href="/vuepress-notes/assets/css/0.styles.1e2ea9a1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-notes/" class="home-link router-link-active"><!----> <span class="site-name">Yu jax</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-notes/" class="nav-link">首页</a></div><div class="nav-item"><a href="https://github.com/cvecve147" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="mailto:u0633126@gm.nuu.edu.tw" class="nav-link external">
+  聯絡我
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-notes/" class="nav-link">首页</a></div><div class="nav-item"><a href="https://github.com/cvecve147" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="mailto:u0633126@gm.nuu.edu.tw" class="nav-link external">
+  聯絡我
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-notes/" class="sidebar-link">內容簡介</a></li><li><a href="/vuepress-notes/menu.html" class="sidebar-link">菜單總覽</a></li><li><a href="/vuepress-notes/day0.html" class="sidebar-link">Day0 起步工具</a></li><li><a href="/vuepress-notes/day1.html" class="sidebar-link">Day1 古早味事件燉畫面綁定</a></li><li><a href="/vuepress-notes/day2.html" class="sidebar-link">Day2 清爽表單處理佐雙向資料</a></li><li><a href="/vuepress-notes/day3.html" class="sidebar-link">Day3 使用者輸入焗列表呈現</a></li><li><a href="/vuepress-notes/day4.html" class="sidebar-link">Day4 峰峰相連互動式資料表單</a></li><li><a href="/vuepress-notes/day5.html" class="sidebar-link">Day5 天然 CSS 過場佐 jQuery 動畫</a></li><li><a href="/vuepress-notes/day6.html" class="sidebar-link">Day6 異國風情資料觀測與設定</a></li><li><a href="/vuepress-notes/day7.html" class="sidebar-link">Day7 有機發酵生命週期</a></li><li><a href="/vuepress-notes/day8.html" class="sidebar-link">Day8 家鄉通訊錄佐手作</a></li><li><a href="/vuepress-notes/day9.html" class="active sidebar-link">Day9 特製雕花 Vue-cli 3.0 與 Node.js 開發環境</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vuepress-notes/day10.html" class="sidebar-link">Day10 科學單檔模組化料理</a></li></ul> </div> <div class="page"> <div class="content"><h3 id="day9-特製雕花-vue-cli-3-0-與-node-js-開發環境"><a href="#day9-特製雕花-vue-cli-3-0-與-node-js-開發環境" aria-hidden="true" class="header-anchor">#</a> Day9 特製雕花 Vue-cli 3.0 與 Node.js 開發環境</h3> <h4 id="內容簡介"><a href="#內容簡介" aria-hidden="true" class="header-anchor">#</a> 內容簡介</h4> <p>簡單介紹 Vue CLI 與安裝環境</p> <h4 id="重點整理"><a href="#重點整理" aria-hidden="true" class="header-anchor">#</a> 重點整理</h4> <ul><li>安裝 vue cli</li> <li>vue cli 介面介紹</li> <li>vue cli 功能</li></ul> <div class="language- extra-class"><pre class="language-text"><code>1. server 開啟server
+2. build 將專案包起來(編譯並壓縮)可給後端執行
+3. lint 看編碼規則是否一致
+4. inspect 檢查webpack配置
+</code></pre></div><p>Code
+安裝 vue cli</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>npm install <span class="token operator">-</span>g @vue<span class="token operator">/</span>cli
+# <span class="token constant">OR</span>
+yarn global add @vue<span class="token operator">/</span>cli
+</code></pre></div><p>創建項目</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>vue create my<span class="token operator">-</span>project
+# <span class="token constant">OR</span>
+vue ui
+</code></pre></div><img src="https://i.imgur.com/PukKcPH.png"> <p>預設工具</p> <img src="https://i.imgur.com/bW0QHUk.png"> <ul><li>server 開啟 server</li> <li>build 將專案包起來(編譯並壓縮)可給後端執行</li> <li>lint 看編碼規則是否一致</li> <li>inspect 檢查 webpack 配置</li></ul> <center><iframe width="560" height="315" src="https://www.youtube.com/embed/puGk4s6O1uw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></center></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vuepress-notes/day8.html" class="prev">
+          Day8 家鄉通訊錄佐手作
+        </a></span> <span class="next"><a href="/vuepress-notes/day10.html">
+          Day10 科學單檔模組化料理
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/vuepress-notes/assets/js/app.05aa0dac.js" defer></script><script src="/vuepress-notes/assets/js/14.aad26f71.js" defer></script>
+  </body>
+</html>

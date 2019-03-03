@@ -46,5 +46,5 @@ vue ui
 - inspect 檢查 webpack 配置
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J08Vd5842BA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/puGk4s6O1uw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
