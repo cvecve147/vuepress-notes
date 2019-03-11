@@ -42,7 +42,7 @@ changeIndex(change) {
 - 資料綁定
 - 設定方法
 
-Code
+#### Code
 
 ```html
 <!DOCTYPE html>

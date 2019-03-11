@@ -16,7 +16,7 @@
 
 - 陣列需要利用@click 來傳回 index 值，再利用\$set 來更新畫面
 
-Code
+#### Code
 
 ```html
 <!DOCTYPE html>

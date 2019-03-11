@@ -16,7 +16,7 @@
 - 資料綁定
 - 設定初始資料
 
-Code
+#### Code
 
 ```html
 <!DOCTYPE html>

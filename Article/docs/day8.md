@@ -27,7 +27,7 @@
 - 刪除(deleteHandler)抓取要刪除的 index 後，給 axios.delete(網域+目標 id)
 - 修改(editHandler)抓取要修改的 index 後，在利用之前所建立的送出按鈕判斷，若是修改則 axios.put(網域+id,input 的資料)
 
-Code
+#### Code
 
 liveServer.setting
 

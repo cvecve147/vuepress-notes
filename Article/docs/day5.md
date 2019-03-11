@@ -11,7 +11,7 @@
 
 - 將資料部分套上 transition
 
-Code
+#### Code
 
 ```html
 <transition name="fade" mode="out-in" appear>
