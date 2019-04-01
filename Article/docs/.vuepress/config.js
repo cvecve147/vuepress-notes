@@ -26,7 +26,8 @@ module.exports = {
       ['/day9', 'Day9 特製雕花 Vue-cli 3.0 與 Node.js 開發環境'],
       ['/day10', 'Day10 科學單檔模組化料理'],
       ['/day11', 'Day11 清燉嫩煮百頁路由'],
-      ['/day12', 'Day12 Vuex']
+      ['/day12', 'Day12 Vuex'],
+      ['/day13', 'Day13 漸進式框架']
     ]
   }
 }
